@@ -10,6 +10,7 @@ var image=""
 var postid=0;
 var count=0;
 var dblog=document.querySelector(".delete")
+var blogs=[]
 
 POST.addEventListener('click',()=>{
     
@@ -26,7 +27,11 @@ SENDP.addEventListener('click',()=>{
     postid++
     
    PTABLE.innerHTML+=`<tr id='parent${postid}' ><td>${POSTTEXT.value}</td><td>0</td><td>0</td><td><button class='update'>update</butto><button id='${postid}' onClick="bdelete(this.id)" class='delete'>delete</button></td></tr>`
-   
+   blogs.push={
+    "blogtext": `${POSTTEXT.value}`;
+    "blogimage": `${POSTIMAGE.value}`
+
+}
     INPUT_DIV.classList.remove('add_input2');
 })
 function bdelete(clicked){    
