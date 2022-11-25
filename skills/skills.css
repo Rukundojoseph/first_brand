@@ -4,6 +4,9 @@
 body{
     background: #4CB0B7;
 }
+.pjct_image{
+    width: 100%;
+}
 .projects {
     width: fit-content;
     color: #F5DF68;
